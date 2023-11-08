@@ -25,6 +25,9 @@ public class UsersPage {
 	@FindBy(xpath = "//table/tbody/tr[last()]/td[3]")
 	private WebElement lastUser;
 	
+	@FindBy(xpath = "//h4[text()='Success!']")
+	private WebElement successMessage;
+	
 	//initialization
 	  public UsersPage(WebDriver driver) {
 		  PageFactory.initElements(driver, this);
@@ -47,6 +50,9 @@ public class UsersPage {
 		public String getUserName() {
 			return lastUser.getText();
 			
+		}
+		public String getSuccessMessage() {
+			 return successMessage.getText();
 		}
 	}
 

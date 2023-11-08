@@ -55,7 +55,7 @@ public class CreateCourseTest extends BaseClass {
        course.clickDeleteButton(courseName, driver);
        course.clickDelete();
        soft.assertTrue(course.getSuccessMessage().contains("success"));
-       if(course.getSuccessMessage().contains("success"));
+       if(course.getSuccessMessage().contains("success"))
        {
     	   excel.writeToexcel("Sheet1", "Add Course", "Pass",IConstantPath.EXCEL_PATH);
        }
